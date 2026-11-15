@@ -8,7 +8,7 @@ TinCLE のショートコーディング作品集です。
 
 | ファイル | 行数 | 内容 |
 |---|---|---|
-| puzzle.c | 8行 | 落ちものパズル（テトリス）。12×20 の盤面、7種のピース、回転・ライン消去・ソフトドロップ対応 |
+| puzzle.c | 8行 | 落ちものパズル。12×20 の盤面、7種のピース、回転・ライン消去・ソフトドロップ対応 |
 | rpg.c | 8行 | RPG。15×10 マップの探索、ランダムエンカウント戦闘、レベルアップ、ポーション、ボスを倒すとクリア |
 | danmaku.js | 7行 | 弾幕STG「SPIRAL CAVERN」。螺旋弾幕のボス、WebAudio の効果音とBGM、HP半分で弾幕が濃くなる |
 
@@ -43,13 +43,13 @@ TinCLE
 
 A collection of TinCLE short-coding works.
 
-Short-coding is  "code golf" (the game of writing the shortest code in bytes). It means writing a finished, working product in a specified number of lines. Set the line count, fit the whole game inside it — and see how far you can get within that constraint.
+Short-coding is "code golf" (the game of writing the shortest code in bytes). It means writing a finished, working product in a specified number of lines. Set the line count, fit the whole game inside it — and see how far you can get within that constraint.
 
 ## Works
 
 | File | Lines | About |
 |---|---|---|
-| puzzle.c | 8 lines | Falling-block puzzle (Tetris). 12×20 board, 7 piece types, rotation, line clears, soft drop |
+| puzzle.c | 8 lines | Falling-block puzzle. 12×20 board, 7 piece types, rotation, line clears, soft drop |
 | rpg.c | 8 lines | An RPG. Explore a 15×10 map, random-encounter battles, leveling up, potions, defeat the boss to clear the game |
 | danmaku.js | 7 lines | Bullet-hell shooter "SPIRAL CAVERN". A spiral-barrage boss, WebAudio sound effects and BGM, patterns get denser below half HP |
 
