@@ -10,6 +10,7 @@ TinCLE のショートコーディング作品集です。
 |---|---|---|
 | puzzle.c | 8行 | 落ちものパズル。12×20 の盤面、7種のピース、回転・ライン消去・ソフトドロップ対応 |
 | rpg.c | 8行 | RPG。15×10 マップの探索、ランダムエンカウント戦闘、レベルアップ、ポーション、ボスを倒すとクリア |
+| mysterypuzzle.c | 8行 | 謎解きアドベンチャー。一人称視点でクリックして移動・調査する。全5シーン。日記で見つけた3桁のコードで塔の扉を開け、星のクリスタルを目指す |
 | danmaku.js | 7行 | 弾幕STG「SPIRAL CAVERN」。螺旋弾幕のボス、WebAudio の効果音とBGM、HP半分で弾幕が濃くなる |
 
 行数は物理行（ファイルの行数そのもの）で数えています。
@@ -18,13 +19,14 @@ TinCLE のショートコーディング作品集です。
 
 - **puzzle.c**: ←→ 移動 / ↑ 回転 / ↓ ソフトドロップ
 - **rpg.c**: 矢印キー 移動 / 戦闘中は SPACE 攻撃、↓ ポーション / クリア・ゲームオーバー後は SPACE でリスタート
+- **mysterypuzzle.c**: マウス クリックで移動・調査（日記を読む／キーパッドのダイヤルを回す／扉を開ける）/ 下端クリックで戻る
 - **danmaku.js**: マウス・タッチ・矢印キー 移動（ショットは自動）/ SPACE・クリック 開始 / R・SPACE・クリック リスタート
 
 ## ビルドと実行
 
-C の2本（puzzle.c / rpg.c）は、TinCLE 配布パッケージの構成（ソースの隣に `libs/` がある状態）でビルドします。Windows / Web の両対応です。
+C の3本（puzzle.c / rpg.c / mysterypuzzle.c）は、TinCLE 配布パッケージの構成（ソースの隣に `libs/` がある状態）でビルドします。Windows / Web の両対応です。
 
-- Windows: `tinclec puzzle.exe puzzle.c`（rpg.c も同様）
+- Windows: `tinclec puzzle.exe puzzle.c`（rpg.c / mysterypuzzle.c も同様）
 - Web: emcass（TinCLE 公式の Web ビルド用ツール）でビルド
 
 danmaku.js は、TinCLE の Web ページにある `tinclecanvas`（400×480）で動く前提のスクリプトです。単体で試す場合は、`<canvas id="tinclecanvas" width="400" height="480">` のあるページで読み込んでください。
@@ -51,6 +53,7 @@ Short-coding is "code golf" (the game of writing the shortest code in bytes). It
 |---|---|---|
 | puzzle.c | 8 lines | Falling-block puzzle. 12×20 board, 7 piece types, rotation, line clears, soft drop |
 | rpg.c | 8 lines | An RPG. Explore a 15×10 map, random-encounter battles, leveling up, potions, defeat the boss to clear the game |
+| mysterypuzzle.c | 8 lines | A first-person puzzle adventure. Click to move and examine across five scenes. Find a 3-digit code in a diary, open the tower door, and reach the star crystal |
 | danmaku.js | 7 lines | Bullet-hell shooter "SPIRAL CAVERN". A spiral-barrage boss, WebAudio sound effects and BGM, patterns get denser below half HP |
 
 Line counts are physical lines — the number of lines in the file itself.
@@ -59,13 +62,14 @@ Line counts are physical lines — the number of lines in the file itself.
 
 - **puzzle.c**: ←→ move / ↑ rotate / ↓ soft drop
 - **rpg.c**: Arrow keys to move / in battle, SPACE attacks and ↓ uses a potion / after clearing or a game over, SPACE restarts
+- **mysterypuzzle.c**: Mouse — click to move and examine (read the diary, turn the keypad dials, open the door) / click the bottom edge to step back
 - **danmaku.js**: Mouse, touch, or arrow keys to move (firing is automatic) / SPACE or click to start / R, SPACE, or click to restart
 
 ## Building and running
 
-The two C files (puzzle.c / rpg.c) build in the TinCLE distribution layout, with `libs/` next to the source. They support both Windows and Web.
+The three C files (puzzle.c / rpg.c / mysterypuzzle.c) build in the TinCLE distribution layout, with `libs/` next to the source. They support both Windows and Web.
 
-- Windows: `tinclec puzzle.exe puzzle.c` (same for rpg.c)
+- Windows: `tinclec puzzle.exe puzzle.c` (same for rpg.c / mysterypuzzle.c)
 - Web: build with emcass (TinCLE's official Web build tool)
 
 danmaku.js is a script meant to run on the `tinclecanvas` element (400×480) of a TinCLE Web page. To try it on its own, load it in a page that has `<canvas id="tinclecanvas" width="400" height="480">`.
