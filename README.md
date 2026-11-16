@@ -13,6 +13,7 @@ TinCLE のショートコーディング作品集です。
 | mysterypuzzle.c | 8行 | 謎解きアドベンチャー。一人称視点でクリックして移動・調査する。全5シーン。日記で見つけた3桁のコードで塔の扉を開け、星のクリスタルを目指す |
 | danmaku.js | 7行 | 弾幕STG「SPIRAL CAVERN」。螺旋弾幕のボス、WebAudio の効果音とBGM、HP半分で弾幕が濃くなる |
 | fps8.c | 8行 | レイキャストFPS。8×8の迷路を進み、追ってくる敵を撃つ。ESCAPEモードは5体撃破か出口到達でクリア、ENDLESSモードはスコアアタック |
+| needle8.c | 8行 | タイミングゲーム「NEEDLE STOP」。左右に往復する針をSPACEで止める。金の帯で+100、銀の帯で+50。10ヒットでクリア、3ミスでゲームオーバー。ヒットするたびに針が速くなる |
 
 行数は物理行（ファイルの行数そのもの）で数えています。
 
@@ -23,12 +24,13 @@ TinCLE のショートコーディング作品集です。
 - **mysterypuzzle.c**: マウス クリックで移動・調査（日記を読む／キーパッドのダイヤルを回す／扉を開ける）/ 下端クリックで戻る
 - **danmaku.js**: マウス・タッチ・矢印キー 移動（ショットは自動）/ SPACE・クリック 開始 / R・SPACE・クリック リスタート
 - **fps8.c**: ←→（A/D） 旋回 / ↑↓（W/S） 前進・後退 / SPACE・画面中央クリック 射撃 / タイトルで SPACE・左クリック ESCAPEモード、R・右クリック ENDLESSモード / マウスだけでも移動可
+- **needle8.c**: SPACE 針を止める / タイトル・クリア・ゲームオーバー後は SPACE で開始・リスタート
 
 ## ビルドと実行
 
-C の4本（puzzle.c / rpg.c / mysterypuzzle.c / fps8.c）は、TinCLE 配布パッケージの構成（ソースの隣に `libs/` がある状態）でビルドします。Windows / Web の両対応です。
+C の5本（puzzle.c / rpg.c / mysterypuzzle.c / fps8.c / needle8.c）は、TinCLE 配布パッケージの構成（ソースの隣に `libs/` がある状態）でビルドします。Windows / Web の両対応です。
 
-- Windows: `tinclec puzzle.exe puzzle.c`（rpg.c / mysterypuzzle.c / fps8.c も同様）
+- Windows: `tinclec puzzle.exe puzzle.c`（rpg.c / mysterypuzzle.c / fps8.c / needle8.c も同様）
 - Web: emcass（TinCLE 公式の Web ビルド用ツール）でビルド
 
 danmaku.js は、TinCLE の Web ページにある `tinclecanvas`（400×480）で動く前提のスクリプトです。単体で試す場合は、`<canvas id="tinclecanvas" width="400" height="480">` のあるページで読み込んでください。
@@ -58,6 +60,7 @@ Short-coding is "code golf" (the game of writing the shortest code in bytes). It
 | mysterypuzzle.c | 8 lines | A first-person puzzle adventure. Click to move and examine across five scenes. Find a 3-digit code in a diary, open the tower door, and reach the star crystal |
 | danmaku.js | 7 lines | Bullet-hell shooter "SPIRAL CAVERN". A spiral-barrage boss, WebAudio sound effects and BGM, patterns get denser below half HP |
 | fps8.c | 8 lines | A raycasting FPS. Fight through an 8×8 maze against an enemy that hunts you down. ESCAPE mode: defeat 5 enemies or reach the exit to clear; ENDLESS mode: score attack |
+| needle8.c | 8 lines | Timing game "NEEDLE STOP". A needle sweeps back and forth across a bar — press SPACE to stop it in the zones. Gold +100, silver +50. 10 hits to clear, 3 misses and it's game over. The needle speeds up with every hit |
 
 Line counts are physical lines — the number of lines in the file itself.
 
@@ -68,12 +71,13 @@ Line counts are physical lines — the number of lines in the file itself.
 - **mysterypuzzle.c**: Mouse — click to move and examine (read the diary, turn the keypad dials, open the door) / click the bottom edge to step back
 - **danmaku.js**: Mouse, touch, or arrow keys to move (firing is automatic) / SPACE or click to start / R, SPACE, or click to restart
 - **fps8.c**: ←→ or A/D to turn / ↑↓ or W/S to move forward and back / SPACE or click the center of the screen to shoot / on the title screen, SPACE or left click for ESCAPE mode, R or right click for ENDLESS mode / mouse-only movement also works
+- **needle8.c**: SPACE to stop the needle / on the title, clear and game-over screens, SPACE starts or restarts
 
 ## Building and running
 
-The four C files (puzzle.c / rpg.c / mysterypuzzle.c / fps8.c) build in the TinCLE distribution layout, with `libs/` next to the source. They support both Windows and Web.
+The five C files (puzzle.c / rpg.c / mysterypuzzle.c / fps8.c / needle8.c) build in the TinCLE distribution layout, with `libs/` next to the source. They support both Windows and Web.
 
-- Windows: `tinclec puzzle.exe puzzle.c` (same for rpg.c / mysterypuzzle.c / fps8.c)
+- Windows: `tinclec puzzle.exe puzzle.c` (same for rpg.c / mysterypuzzle.c / fps8.c / needle8.c)
 - Web: build with emcass (TinCLE's official Web build tool)
 
 danmaku.js is a script meant to run on the `tinclecanvas` element (400×480) of a TinCLE Web page. To try it on its own, load it in a page that has `<canvas id="tinclecanvas" width="400" height="480">`.
